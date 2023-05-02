@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <div class="container space-between d-flex">
+                <div class="profile-name">Name</div>
+                <div class="profile-pic"></div>
+            </div>
+        </header>
+        <main class="container">
+            <div class="main-body">
+                <h1>JavaScript API app by Edgar DA FoxBoi</h1>
+                <hr>
+                <div class="d-flex space-between">
+                    <button onclick="GetComments()">Get comments</button>
+                    <button onclick="ClearComments()">Clear comments</button>
+                </div>
+
+                <div style="margin: 10px auto;" class="d-flex space-between container">
+                    <div>
+                        <span>Is now testing</span>
+                        <button onclick="toggleTest()" type="button" id="is-test">True</button>
+                    </div>
+                    <div class="d-flex link">
+                        <button onclick="toggleHTTP()" type="button" id="http-toggle">http://</button>
+                        <input type="text" id="link-input" disabled placeholder="Input target ip/url">
+                    </div>
+                </div>
+
+                <div class="logs">
+                    Logs will be here.<br>
+                    If they not appear, click on "Get comments" again.
+                </div>
+
+                <div id="comments-container">
+                    <ul></ul>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <h1>App by Edgar</h1>
+            <br>
+            <div class="container d-flex space-between">
+                <a href="https://www.youtube.com/channel/UCYz74RGW3WNPvSxrRoMvZsA" target="_blank" style="width: fit-content;"><h2 style="font-size: 15px">YouTubei</h2></a>
+                <a href="https://twitter.com/EdgarFoxBoi" target="_blank" style="width: fit-content;"><h2 style="font-size: 15px">Twitter</h2></a>
+                <a href="https://www.reddit.com/user/EdoGames" target="_blank" style="width: fit-content;"><h2 style="font-size: 15px">Reddit</h2></a>
+            </div>
+            
+        </footer>
+    </body>
+    <script src="./index.js"></script>
+</html>

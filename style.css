@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Skranji:wght@400;700&display=swap');
+
+*{
+    font-family: 'Skranji', cursive;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    color: black
+}
+.container{
+    width: 90%;
+    display: block;
+    margin: auto;
+}
+
+header, footer{
+    font-weight: 700;
+    min-height: 80px;
+    width: 100%;
+    background: rgb(75, 155, 155);
+}
+header{
+    margin-bottom: 10px;
+}
+footer{
+    background: rgb(48, 100, 100);
+}
+footer h1, footer h2, footer h3{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    font-style: italic;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1;
+}
+.main-body{
+    background: rgba(20, 20, 20, 0.2);
+    border-radius: 20px;
+    border: 1px solid gray;
+    padding: 40px 10px;
+    margin: 20px 0;
+}
+.main-body h1{
+    font-size: 20px;
+    text-align: center;
+}
+.main-body hr:not(ul hr){
+    border: none;
+    background: white;
+    height: 2px;
+    border-radius: 50px;
+    margin: 25px 0;
+}
+main{
+    height: 100%;
+}
+
+button{
+    transform: scale(1);
+    background: rgb(75, 155, 155);
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+ul{
+    list-style: none;
+    width: 70%;
+    border-radius: 10px;
+    margin: 5px auto;
+    padding: 5px;
+}
+main ul li ul{
+    width: 100%;
+    background: rgb(59, 187, 59);
+}
+
+hr{
+    margin: 5px 0;
+}
+
+#comments-container{
+    margin: 10px auto;
+    border-radius: 10px;
+    background: rgba(20, 20, 20, 0.2);
+    max-height: 90vh;
+    overflow: auto;
+    min-width: 100px;
+    max-width: 600px;
+}
+#comments-container::-webkit-scrollbar {
+    width: 12px;
+}
+
+#comments-container::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+
+#comments-container::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+.d-flex{
+    display: flex;
+}
+.space-between{
+    justify-content: space-between;
+}
+
+.profile-pic img, .profile-pic{
+    --scale: 70px;
+}
+.profile-pic{
+    transform: scale(1);
+    cursor: pointer;
+    margin: 5px 0;
+    width: var(--scale);
+    height: var(--scale);
+    border-radius: 50%;
+    background: white;
+    overflow: hidden;
+}
+.profile-pic:hover{
+    transform: scale(1.1);
+}
+
+.profile-name{
+    font-family: sans-serif;
+    margin: auto 0;
+    font-size: x-large;
+    font-size-adjust: auto;
+}
+
+#link-input{
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.logs{
+    min-width: 100px;
+    min-height: 100px;
+    background: black;
+    color: white;
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px;
+    padding: 10px 15px;
+    box-shadow: 0 0 10px black;
+}
+
+.link{
+    width: 50%;
+    max-width: 250px;
+}
+.link *:not(button){
+    width: 100%;
+}
+.link button{
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
+    border: 1px solid black;
+    border-right: none;
+}
+.link input, .link #link-input{
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    border-left: none;
+}
+
+.post-image{
+    display: block;
+    margin: 10px auto;
+    border-radius: 15px;
+}
