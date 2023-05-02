@@ -23,6 +23,8 @@ header, footer{
 }
 header{
     margin-bottom: 10px;
+    min-height: 0;
+    padding: 40px 0;
 }
 footer{
     background: rgb(48, 100, 100);
@@ -38,6 +40,7 @@ body{
     display: flex;
     flex-direction: column;
     flex: 1 1;
+    overflow: auto;
 }
 .main-body{
     background: rgba(20, 20, 20, 0.2);
@@ -117,21 +120,14 @@ hr{
     justify-content: space-between;
 }
 
-.profile-pic img, .profile-pic{
+.menu-opener img, .menu-opener{
     --scale: 70px;
 }
-.profile-pic{
-    transform: scale(1);
+.menu-opener{
+    display: block;
+    background: rgb(200, 200, 200);
     cursor: pointer;
-    margin: 5px 0;
-    width: var(--scale);
-    height: var(--scale);
-    border-radius: 50%;
-    background: white;
-    overflow: hidden;
-}
-.profile-pic:hover{
-    transform: scale(1.1);
+    height: 100%;
 }
 
 .profile-name{
@@ -182,4 +178,41 @@ hr{
     display: block;
     margin: 10px auto;
     border-radius: 15px;
+}
+
+.side-panel{
+    display: block;
+    transform: translateX(0);
+    position: absolute;
+    right: 0;
+    min-width: 380px;
+    width: 50vw;
+    background: white;
+    height: 100%;
+    max-height: 100vh;
+    padding: 10px;
+    box-shadow: 0 0 10px black;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+.link-container{
+    margin-top: 10px;
+}
+.link-container hr{
+    width: 70%;
+}
+.link-container a{
+    transform: scale(1);
+}
+.link-container a:hover{
+    transform: scale(1.5);
+}
+
+#darken{
+    display: none;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    width: 100vw;
+    height: 100vh;
 }

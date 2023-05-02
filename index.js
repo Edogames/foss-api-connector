@@ -51,6 +51,7 @@ let commonKeyList = [
 ];
 
 let isTestMode = true;
+let panelOpenState = false;
 
 let retreavedData = new Array();
 let commentContainer = document.getElementById("comments-container");
@@ -59,6 +60,8 @@ let checker = document.getElementById("is-test");
 let input = document.getElementById("link-input");
 let logs = document.querySelector(".logs");
 let httpToggle = document.getElementById("http-toggle");
+let panel = document.querySelector(".side-panel");
+let darken = document.getElementById("darken");
 
 let fetchError = "";
 
@@ -153,6 +156,27 @@ function SetProperties(){
     }
     fetchError = "";
     console.clear();
+    
+    if(!panelOpenState){
+        panel.style.transform = "translateX(100%)";
+        setTimeout(() => {
+            panel.style.display = "none";
+        }, 300);
+        darken.style.display = "none";
+        document.querySelector("body").style.overflow = "auto";
+    }else{
+        panel.style.display = "block";
+        setTimeout(() => {
+            panel.style.transform = "translateX(0)";
+        }, 1);
+        darken.style.display = "block";
+        document.querySelector("body").style.overflow = "hidden";
+    }
+}
+
+function setPanelState(state){
+    panelOpenState = state;
+    SetProperties();
 }
 
 SetProperties();

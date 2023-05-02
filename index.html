@@ -11,8 +11,8 @@
     <body>
         <header>
             <div class="container space-between d-flex">
+                <button class="menu-opener" onClick="setPanelState(true)">Open panel</button>
                 <div class="profile-name">Name</div>
-                <div class="profile-pic"></div>
             </div>
         </header>
         <main class="container">
@@ -46,15 +46,35 @@
             </div>
         </main>
         <footer>
+            <br>
             <h1>App by Edgar</h1>
             <br>
-            <div class="container d-flex space-between">
-                <a href="https://www.youtube.com/channel/UCYz74RGW3WNPvSxrRoMvZsA" target="_blank" style="width: fit-content;"><h2 style="font-size: 15px">YouTubei</h2></a>
-                <a href="https://twitter.com/EdgarFoxBoi" target="_blank" style="width: fit-content;"><h2 style="font-size: 15px">Twitter</h2></a>
-                <a href="https://www.reddit.com/user/EdoGames" target="_blank" style="width: fit-content;"><h2 style="font-size: 15px">Reddit</h2></a>
-            </div>
-            
+            <a href="https://github.com/Edogames/foss-api-connector/tree/main" target="_blank" style="width: fit-content;"><h2 style="font-size: 15px">Github repository</h2></a>
+            <br>
         </footer>
+        <div id="darken">
+        </div>
+        <div class="side-panel">
+            <br>
+            <div class="container d-block">
+                <div class="d-flex space-between container">
+                    <h1>Social/Github links</h1>
+                    <button onClick="setPanelState(false)">Close</button>
+                </div>
+                
+                <hr>
+                <div class="link-container">
+                    <a href="https://www.youtube.com/channel/UCYz74RGW3WNPvSxrRoMvZsA" target="_blank" style="width: fit-content;"><h2 style="font-size: 15px">YouTubei</h2></a>
+                    <hr>
+                    <a href="https://twitter.com/EdgarFoxBoi" target="_blank" style="width: fit-content;"><h2 style="font-size: 15px">Twitter</h2></a>
+                    <hr>
+                    <a href="https://www.reddit.com/user/EdoGames" target="_blank" style="width: fit-content;"><h2 style="font-size: 15px">Reddit</h2></a>
+                    <hr>
+                    <a href="https://github.com/Edogames" target="_blank" style="width: fit-content;"><h2 style="font-size: 15px">Github</h2></a>
+                    <hr>
+                </div>
+            </div>
+        </div>
     </body>
     <script src="./index.js"></script>
 </html>
