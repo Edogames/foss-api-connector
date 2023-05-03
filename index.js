@@ -50,7 +50,7 @@ let commonKeyList = [
     "comments",
 ];
 
-let isTestMode = true;
+let isTestMode = false;
 let panelOpenState = false;
 
 let retreavedData = new Array();
@@ -141,41 +141,47 @@ function toggleHTTP(){
 
 function SetProperties(){
     checker.innerText = isTestMode == true ? "True" : "False";
-    if(isTestMode){
+    if(!isTestMode){
         logs.style.display = "none";
-        input.disabled = true;
-        httpToggle.disabled = true;
-        httpToggle.style.cursor = "default";
-        httpToggle.style.background = "gray";
-    }else{
-        logs.style.display = "block";
         input.disabled = false;
         httpToggle.disabled = false;
         httpToggle.style.cursor = "pointer";
         httpToggle.style.background = "rgb(75, 155, 155)";
+    }else{
+        logs.style.display = "block";
+        input.disabled = true;
+        httpToggle.disabled = true;
+        httpToggle.style.cursor = "default";
+        httpToggle.style.background = "gray";
     }
     fetchError = "";
     console.clear();
     
     if(!panelOpenState){
         panel.style.transform = "translateX(100%)";
+        darken.style.backdropFilter = "blur(0px)";
+        darken.style.background = "rgba(0, 0, 0, 0)";
         setTimeout(() => {
+            darken.style.display = "none";
             panel.style.display = "none";
         }, 300);
-        darken.style.display = "none";
         document.querySelector("body").style.overflow = "auto";
+        document.querySelector(".menu-opener").innerText = "Open panel";
     }else{
         panel.style.display = "block";
+        darken.style.display = "block";
         setTimeout(() => {
             panel.style.transform = "translateX(0)";
+            darken.style.background = "rgba(0, 0, 0, 0.7)";
+            darken.style.backdropFilter = "blur(10px)";
         }, 1);
-        darken.style.display = "block";
         document.querySelector("body").style.overflow = "hidden";
+        document.querySelector(".menu-opener").innerText = "Close panel";
     }
 }
 
-function setPanelState(state){
-    panelOpenState = state;
+function togglePanelState(){
+    panelOpenState = !panelOpenState;
     SetProperties();
 }
 

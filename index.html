@@ -11,25 +11,26 @@
     <body>
         <header>
             <div class="container space-between d-flex">
-                <button class="menu-opener" onClick="setPanelState(true)">Open panel</button>
-                <div class="profile-name">Name</div>
+                <div class="profile-name">API Connector</div>
+                <button class="menu-opener" onClick="togglePanelState()"></button>
             </div>
         </header>
         <main class="container">
             <div class="main-body">
                 <h1>JavaScript API app by Edgar DA FoxBoi</h1>
                 <hr>
-                <div class="d-flex space-between">
+                <div id="main-buttons">
                     <button onclick="GetComments()">Get comments</button>
+                    <br>
                     <button onclick="ClearComments()">Clear comments</button>
                 </div>
 
                 <div style="margin: 10px auto;" class="d-flex space-between container">
-                    <div>
+                    <div class="test">
                         <span>Is now testing</span>
                         <button onclick="toggleTest()" type="button" id="is-test">True</button>
                     </div>
-                    <div class="d-flex link">
+                    <div class="link">
                         <button onclick="toggleHTTP()" type="button" id="http-toggle">http://</button>
                         <input type="text" id="link-input" disabled placeholder="Input target ip/url">
                     </div>
@@ -59,18 +60,17 @@
             <div class="container d-block">
                 <div class="d-flex space-between container">
                     <h1>Social/Github links</h1>
-                    <button onClick="setPanelState(false)">Close</button>
                 </div>
                 
                 <hr>
                 <div class="link-container">
-                    <a href="https://www.youtube.com/channel/UCYz74RGW3WNPvSxrRoMvZsA" target="_blank" style="width: fit-content;"><h2 style="font-size: 15px">YouTubei</h2></a>
+                    <a href="https://www.youtube.com/channel/UCYz74RGW3WNPvSxrRoMvZsA" target="_blank" style="width: fit-content;"><h2>YouTubei</h2></a>
                     <hr>
-                    <a href="https://twitter.com/EdgarFoxBoi" target="_blank" style="width: fit-content;"><h2 style="font-size: 15px">Twitter</h2></a>
+                    <a href="https://twitter.com/EdgarFoxBoi" target="_blank" style="width: fit-content;"><h2>Twitter</h2></a>
                     <hr>
-                    <a href="https://www.reddit.com/user/EdoGames" target="_blank" style="width: fit-content;"><h2 style="font-size: 15px">Reddit</h2></a>
+                    <a href="https://www.reddit.com/user/EdoGames" target="_blank" style="width: fit-content;"><h2>Reddit</h2></a>
                     <hr>
-                    <a href="https://github.com/Edogames" target="_blank" style="width: fit-content;"><h2 style="font-size: 15px">Github</h2></a>
+                    <a href="https://github.com/Edogames" target="_blank" style="width: fit-content;"><h2>Github</h2></a>
                     <hr>
                 </div>
             </div>
